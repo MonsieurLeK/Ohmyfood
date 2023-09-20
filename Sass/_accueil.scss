@@ -1,0 +1,17 @@
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $grey2;
+    box-shadow: inset 0px 3px 3px 0px rgba(0,0,0,0.10);
+    gap: 15px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    background: $main-grey;
+    text-align: center;
+}
