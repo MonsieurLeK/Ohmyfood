@@ -1,17 +1,37 @@
 /* Polices */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 /* Variables */
+$main-grey: #F3F3F3;
+$grey2: #EAEAEA;
+$green: #99E2D0;
+$green-font: #008766;
+$purple: #9356DC;
 /* Mixins */
-/* Modules */
 
-/***** Header *****/
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Général */
+body {
+    margin: 0;
+    font-family: 'Roboto';
 }
 
 .title {
     font-family: 'Shrikhand';
     font-size: 30px;
+    margin: 15px;
 }
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 30px;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(0deg, rgba(147,86,220,1) 26%, rgba(227,142,240,1) 92%);
+}
+
+
+/* imports */
+@import "Modules/header";
+@import "accueil";
