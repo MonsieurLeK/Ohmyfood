@@ -7,6 +7,7 @@
 body {
   margin: 0;
   font-family: "Roboto";
+  min-width: 350px;
 }
 
 .title {
@@ -55,6 +56,7 @@ header a:hover {
   gap: 15px;
 }
 
+/* Hero header */
 .hero {
   display: flex;
   flex-direction: column;
@@ -68,6 +70,7 @@ header a:hover {
   font-size: 18px;
 }
 
+/* partie fonctionnement du site */
 .fonctionnement h2 {
   margin-left: 10%;
 }
@@ -77,6 +80,7 @@ header a:hover {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  margin-bottom: 70px;
 }
 .fonctionnement__card {
   position: relative;
@@ -109,4 +113,47 @@ header a:hover {
 }
 .fonctionnement__card .fa-store {
   color: #9356DC;
+}
+
+/* partie restaurants */
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background: #F3F3F3;
+}
+.restaurants h2 {
+  margin-left: 10%;
+  margin-top: 50px;
+}
+.restaurants__card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.restaurants__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  height: 250px;
+  width: 90%;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 500px;
+}
+.restaurants__card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 70%;
+}
+.restaurants__card h3 {
+  margin: 0;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+.restaurants__card p {
+  margin: 0;
+  margin-left: 30px;
 }/*# sourceMappingURL=main.css.map */

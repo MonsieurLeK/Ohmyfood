@@ -6,6 +6,8 @@
     gap: 15px;
 }
 
+/* Hero header */
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -18,6 +20,9 @@
         font-size: 18px;
     }
 }
+
+/* partie fonctionnement du site */
+
 .fonctionnement {
     & h2 {
         margin-left: 10%;
@@ -28,6 +33,7 @@
         justify-content: center;
         align-items: center;
         gap: 30px;
+        margin-bottom: 70px;
     }
     &__card {
         position: relative;
@@ -60,5 +66,49 @@
         & .fa-store {
             color: $purple;
         }
+    }
+}
+
+/* partie restaurants */
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    background: $main-grey;
+    & h2 {
+        margin-left: 10%;
+        margin-top: 50px;
+    }
+    &__card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        height: 250px;
+        width: 90%;
+        border-radius: 20px;
+        overflow: hidden;
+        max-width: 500px;
+        & img {
+            object-fit: cover;
+            width: 100%;
+            height: 70%;
+        }
+        & h3 {
+            margin: 0;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        & p {
+            margin: 0;
+            margin-left: 30px;
+        }
+
     }
 }

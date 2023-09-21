@@ -13,6 +13,7 @@ $purple: #9356DC;
 body {
     margin: 0;
     font-family: 'Roboto';
+    min-width: 350px;
 }
 
 .title {
@@ -36,3 +37,4 @@ body {
 /* imports */
 @import "Modules/header";
 @import "accueil";
+@import "Modules/footer"
