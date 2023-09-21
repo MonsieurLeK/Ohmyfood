@@ -66,4 +66,46 @@ header a:hover {
 }
 .hero p {
   font-size: 18px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+.fonctionnement__card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fonctionnement__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  background: #F3F3F3;
+  border-radius: 20px;
+  gap: 30px;
+  box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement__card--circle {
+  position: relative;
+  left: -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  background: #9356DC;
+  border-radius: 50%;
+  color: white;
+}
+.fonctionnement__card .fa-mobile-screen-button {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 25px;
+}
+.fonctionnement__card h3 {
+  margin-right: 20px;
 }/*# sourceMappingURL=main.css.map */
