@@ -66,4 +66,62 @@ header a:hover {
 }
 .hero p {
   font-size: 18px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+.fonctionnement h2 {
+  margin-left: 10%;
+}
+.fonctionnement__card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+.fonctionnement__card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 80%;
+  max-width: 500px;
+  background: #F3F3F3;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement__card--circle {
+  position: absolute;
+  display: flex;
+  left: -15px;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  background: #9356DC;
+  border-radius: 50%;
+  color: white;
+}
+.fonctionnement__card .fa-mobile-screen-button {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+}
+.fonctionnement__card .fa-list-ul {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+}
+.fonctionnement__card .fa-store {
+  color: #9356DC;
+  font-size: 20px;
+}
+.fonctionnement__card h3 {
+  margin-right: 20px;
+  margin-left: 10px;
 }/*# sourceMappingURL=main.css.map */
