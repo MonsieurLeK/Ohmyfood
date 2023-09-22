@@ -4,6 +4,10 @@ footer {
     background: $footer-color;
     color: white;
     padding: 25px;
+    & h3 {
+        font-family: 'Shrikhand';
+        font-weight: 500;
+    }
     & a {
         text-decoration: none!important;
         color: white;

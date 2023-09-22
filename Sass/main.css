@@ -166,6 +166,10 @@ footer {
   color: white;
   padding: 25px;
 }
+footer h3 {
+  font-family: "Shrikhand";
+  font-weight: 500;
+}
 footer a {
   text-decoration: none !important;
   color: white;
