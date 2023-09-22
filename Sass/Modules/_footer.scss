@@ -1,0 +1,21 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    background: $footer-color;
+    color: white;
+    padding: 25px;
+    & a {
+        text-decoration: none!important;
+        color: white;
+    }
+    & .fa-utensils {
+        margin-right: 10px;
+    }
+    & .fa-handshake-angle {
+        margin-right: 5px;
+    }
+    .footer__link-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
