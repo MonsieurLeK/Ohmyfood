@@ -1,0 +1,59 @@
+img {
+    width: 100%;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: -40px;
+    background: $main-grey;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    transform: translateY(-40px);
+    &__title {
+        font-family: 'Shrikhand';
+        font-size: 30px;
+        font-weight: 500;
+    }
+    &__section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        &--title {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 100;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+        &--separateur {
+            width: 45px;
+            height: 3px;
+            background: $green;
+        }
+        &--card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: white;
+            box-shadow: $box-shadow;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 15px;
+            &-price {
+                position: absolute;
+                right: 15px;
+                bottom: 15px;
+                font-weight: 600;
+            }
+            h3 {
+                margin: 0;
+            }
+            p {
+                margin: 0;
+                font-size: 14px;
+            }
+        }
+    }
+}
