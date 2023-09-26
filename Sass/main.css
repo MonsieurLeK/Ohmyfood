@@ -4,6 +4,10 @@
 /* Variables */
 /* Mixins */
 /* Général */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Roboto";
@@ -24,9 +28,10 @@ body {
   padding: 20px;
   margin: 30px;
   color: white;
+  text-decoration: none;
   filter: brightness(1);
   border-radius: 50px;
-  background: linear-gradient(0deg, #9356DC 5%, #FF79DA 100%);
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   cursor: pointer;
 }
 .button:hover {
@@ -55,11 +60,31 @@ header a:hover {
 }
 
 .location {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 50px;
   background: #EAEAEA;
-  gap: 15px;
+}
+.location__input {
+  width: 70%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+.location__input:focus {
+  outline: none;
+}
+.location .fa-location-dot {
+  position: absolute;
+  left: 13%;
+  font-size: 20px;
 }
 
 /* Hero header */
@@ -122,15 +147,16 @@ header a:hover {
 }
 
 /* partie restaurants */
-.restaurants {
+#restaurants {
   display: flex;
   flex-direction: column;
   background: #F3F3F3;
 }
-.restaurants h2 {
+#restaurants h2 {
   margin-left: 10%;
   margin-top: 50px;
 }
+
 .restaurants__card-container {
   display: flex;
   flex-direction: column;
@@ -142,6 +168,7 @@ header a:hover {
   text-decoration: none;
   color: inherit;
 }
+
 .restaurants__card {
   position: relative;
   display: flex;
@@ -157,7 +184,7 @@ header a:hover {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 70%;
+  height: 175px;
 }
 .restaurants__card h3 {
   margin: 0;
@@ -258,4 +285,51 @@ img {
 .menu__section--card p {
   margin: 0;
   font-size: 14px;
+}
+
+.checkbox-heart {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  bottom: 5px;
+  right: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 50px;
+  width: 50px;
+}
+
+.checkbox-heart + .checkbox-heart__label {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 25px;
+}
+.checkbox-heart + .checkbox-heart__label .fa-regular {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  opacity: 1;
+  transition: opacity 0.1s ease;
+}
+.checkbox-heart + .checkbox-heart__label .fa-solid {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform-origin: bottom;
+  transform: scale(0);
+  transition: transform 0.1s ease;
+}
+
+.checkbox-heart:checked + .checkbox-heart__label .fa-solid {
+  transform: scale(1);
+}
+
+.checkbox-heart:checked + .checkbox-heart__label .fa-regular {
+  opacity: 0;
 }/*# sourceMappingURL=main.css.map */
