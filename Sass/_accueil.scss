@@ -122,6 +122,16 @@
     border-radius: 20px;
     overflow: hidden;
     max-width: 500px;
+    &--new {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 6px 10px;
+        border-radius: 3px;
+        background: $green;
+        color: $green-font;
+        font-weight: 600;
+    }
     & img {
         object-fit: cover;
         width: 100%;
