@@ -334,7 +334,7 @@ img {
   display: block;
   color: #99E2D0;
   transform: scaleX(0);
-  transition: transform 0.2s ease-out;
+  transition: transform 0.2s 0.3s ease-out;
 }
 .menu__section--card h3 {
   margin: 0;
@@ -345,10 +345,6 @@ img {
 }
 
 /* Animation des checkbox des cartes de menu */
-.menu__section--card-checkbox:hover + .container-check {
-  transform: translateX(0);
-}
-
 .menu__section--card-checkbox:checked + .container-check {
   transform: translateX(0);
 }
