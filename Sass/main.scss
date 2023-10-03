@@ -20,6 +20,11 @@ body {
     margin: 0;
     font-family: 'Roboto';
     min-width: 350px;
+    animation: no-scroll 3.5s linear;
+}
+
+input::placeholder {
+    color: black;
 }
 
 .title {
@@ -45,7 +50,17 @@ body {
         filter: brightness(1.2);
     }
 }
-
+@keyframes no-scroll {
+    from {
+        overflow: hidden;
+    }
+    99% {
+        overflow: hidden;
+    }
+    to {
+        overflow: visible;
+    }
+}
 
 /* imports */
 @import "Modules/header";
@@ -53,3 +68,4 @@ body {
 @import "Modules/footer";
 @import "Modules/menu";
 @import "Modules/checkbox";
+@import "loader";
