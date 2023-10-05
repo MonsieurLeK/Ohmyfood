@@ -1,0 +1,51 @@
+@media (min-width: 1024px) {
+    /** responsive de l'accueil **/
+    .fonctionnement {
+        padding: 50px 10%;
+        & h2 {
+            margin-left: 0;
+            margin-bottom: 50px;
+        }
+        &__card-container {
+            flex-direction: row;
+            gap: 50px;
+        }
+        &__card {
+            width: 30%;
+        }
+    }
+    #restaurants {
+        padding: 50px 10%;
+        & h2 {
+            margin: 0;
+            margin-bottom: 50px;
+        }
+    }
+    .restaurants__card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    .restaurants__card {
+        width: 45%;
+        height: 350px;
+        & img {
+            height: 275px;
+        }
+    }
+    footer {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        gap: 50px;
+        padding-right: 50px;
+        padding-top: 50px;
+        & h3 {
+            margin: 0;
+        }
+        .footer__link-container {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+}

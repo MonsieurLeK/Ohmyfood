@@ -19,8 +19,7 @@ html {
 body {
     margin: 0;
     font-family: 'Roboto';
-    min-width: 350px;
-    animation: no-scroll 3.5s linear;
+    min-width: 320px;
 }
 
 input::placeholder {
@@ -46,19 +45,9 @@ input::placeholder {
     border-radius: 50px;
     background: $button-gradient;
     cursor: pointer;
+    transition: filter 0.2s ease;
     &:hover {
         filter: brightness(1.2);
-    }
-}
-@keyframes no-scroll {
-    from {
-        overflow: hidden;
-    }
-    99% {
-        overflow: hidden;
-    }
-    to {
-        overflow: visible;
     }
 }
 
@@ -69,3 +58,4 @@ input::placeholder {
 @import "Modules/menu";
 @import "Modules/checkbox";
 @import "loader";
+@import "responsive";

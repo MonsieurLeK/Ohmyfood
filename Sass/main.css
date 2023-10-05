@@ -11,8 +11,7 @@ html {
 body {
   margin: 0;
   font-family: "Roboto";
-  min-width: 350px;
-  animation: no-scroll 3.5s linear;
+  min-width: 320px;
 }
 
 input::-moz-placeholder {
@@ -42,22 +41,12 @@ input::placeholder {
   border-radius: 50px;
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   cursor: pointer;
+  transition: filter 0.2s ease;
 }
 .button:hover {
   filter: brightness(1.2);
 }
 
-@keyframes no-scroll {
-  from {
-    overflow: hidden;
-  }
-  99% {
-    overflow: hidden;
-  }
-  to {
-    overflow: visible;
-  }
-}
 /* imports */
 header {
   position: relative;
@@ -67,6 +56,9 @@ header {
   align-items: center;
   box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
 }
+header .title {
+  animation: fade-in-up 1s ease-out forwards;
+}
 header a {
   position: absolute;
   font-size: 25px;
@@ -74,11 +66,61 @@ header a {
   text-decoration: none;
   color: black;
   transition: font-size 150ms;
+  transform: translateX(-100px);
+  animation: fade-in-left 1s 0.5s ease-out forwards;
 }
 header a:hover {
   font-size: 30px;
 }
 
+/** Animations du header au chargement de la page **/
+@keyframes fade-in-up {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in-left {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/** animation du header après le loader **/
+#index-title {
+  animation: fade-in-up-index 5.5s ease-out forwards;
+}
+
+@keyframes fade-in-up-index {
+  from {
+    transform: translateY(-100px);
+  }
+  80% {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+/** Eviter le scroll pendant l'animation du loader **/
+#index-body {
+  overflow: hidden;
+  animation: no-scroll 0.5s 4s linear forwards;
+}
+
+@keyframes no-scroll {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: visible;
+  }
+}
+/** Début de la mise en page **/
 .location {
   position: relative;
   display: flex;
@@ -103,7 +145,7 @@ header a:hover {
 }
 .location .fa-location-dot {
   position: absolute;
-  left: 13%;
+  transform: translateX(-100px);
   font-size: 20px;
 }
 
@@ -123,7 +165,7 @@ header a:hover {
 
 /* partie fonctionnement du site */
 .fonctionnement h2 {
-  margin-left: 10%;
+  margin-left: 15%;
 }
 .fonctionnement__card-container {
   display: flex;
@@ -140,10 +182,15 @@ header a:hover {
   justify-content: center;
   background: #F3F3F3;
   width: 80%;
-  max-width: 500px;
   border-radius: 20px;
+  cursor: default;
   gap: 20px;
   box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+.fonctionnement__card--title {
+  font-size: 16px;
 }
 .fonctionnement__card--circle {
   position: absolute;
@@ -159,11 +206,21 @@ header a:hover {
   font-weight: 500;
 }
 .fonctionnement__card i {
+  position: absolute;
+  transform: translateX(-100px);
   color: rgba(0, 0, 0, 0.5);
   font-size: 20px;
 }
-.fonctionnement__card .fa-store {
+.fonctionnement__card .fa-purple {
   color: #9356DC;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.fonctionnement__card:hover {
+  transform: scale(1.1);
+}
+.fonctionnement__card:hover .fa-purple {
+  opacity: 1;
 }
 
 /* partie restaurants */
@@ -173,7 +230,7 @@ header a:hover {
   background: #F3F3F3;
 }
 #restaurants h2 {
-  margin-left: 10%;
+  margin-left: 15%;
   margin-top: 50px;
 }
 
@@ -196,9 +253,9 @@ header a:hover {
   background: white;
   height: 250px;
   width: 90%;
+  max-width: 800px;
   border-radius: 20px;
   overflow: hidden;
-  max-width: 500px;
 }
 .restaurants__card--new {
   position: absolute;
@@ -275,7 +332,7 @@ img {
   display: flex;
   height: 55px;
   font-family: "Shrikhand";
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 500;
 }
 .menu__section {
@@ -316,6 +373,7 @@ img {
           appearance: none;
   width: 100%;
   height: 98%;
+  cursor: pointer;
   z-index: 1;
 }
 .menu__section--card .container-check {
@@ -422,14 +480,15 @@ img {
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
+  box-sizing: content-box;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   z-index: 5;
   background-color: white;
   transform: translateX(0);
@@ -524,5 +583,57 @@ img {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  /** responsive de l'accueil **/
+  .fonctionnement {
+    padding: 50px 10%;
+  }
+  .fonctionnement h2 {
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+  .fonctionnement__card-container {
+    flex-direction: row;
+    gap: 50px;
+  }
+  .fonctionnement__card {
+    width: 30%;
+  }
+  #restaurants {
+    padding: 50px 10%;
+  }
+  #restaurants h2 {
+    margin: 0;
+    margin-bottom: 50px;
+  }
+  .restaurants__card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .restaurants__card {
+    width: 45%;
+    height: 350px;
+  }
+  .restaurants__card img {
+    height: 275px;
+  }
+  footer {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+  }
+  footer h3 {
+    margin: 0;
+  }
+  footer .footer__link-container {
+    flex-direction: row;
+    gap: 20px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,3 +1,38 @@
+/** animation du header après le loader **/
+
+#index-title {
+    animation: fade-in-up-index 5.5s ease-out forwards;
+}
+@keyframes fade-in-up-index {
+    from {
+        transform: translateY(-100px);
+    }
+    80% {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/** Eviter le scroll pendant l'animation du loader **/
+
+
+#index-body {
+    overflow: hidden;
+    animation: no-scroll 0.5s 4s linear forwards;
+}
+@keyframes no-scroll {
+    from {
+        overflow: hidden;
+    }
+    to {
+        overflow: visible;
+    }
+}
+
+/** Début de la mise en page **/
+
 .location {
     position: relative;
     display: flex;
@@ -21,7 +56,7 @@
     }
     & .fa-location-dot {
         position: absolute;
-        left: 13%;
+        transform: translateX(-100px);
         font-size: 20px;
     }
 }
@@ -45,7 +80,7 @@
 
 .fonctionnement {
     & h2 {
-        margin-left: 10%;
+        margin-left: 15%;
     }
     &__card-container {
         display: flex;
@@ -62,10 +97,15 @@
         justify-content: center;
         background: $main-grey;
         width: 80%;
-        max-width: 500px;
         border-radius: 20px;
+        cursor: default;
         gap: 20px;
         box-shadow: $box-shadow;
+        transform: scale(1);
+        transition: transform 0.3s ease;
+        &--title {
+            font-size: 16px;
+        }
         &--circle{
             position: absolute;
             left: -15px;
@@ -80,11 +120,21 @@
             font-weight: 500;
         }
         & i {
+            position: absolute;
+            transform: translateX(-100px);
             color: $almost-black;
             font-size: 20px;
         }
-        & .fa-store {
+        & .fa-purple {
             color: $purple;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+        &:hover .fa-purple {
+            opacity: 1;
         }
     }
 }
@@ -96,7 +146,7 @@
     flex-direction: column;
     background: $main-grey;
     & h2 {
-        margin-left: 10%;
+        margin-left: 15%;
         margin-top: 50px;
     }
 }
@@ -119,9 +169,9 @@
     background: white;
     height: 250px;
     width: 90%;
+    max-width: 800px;
     border-radius: 20px;
     overflow: hidden;
-    max-width: 500px;
     &--new {
         position: absolute;
         top: 15px;
