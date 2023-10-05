@@ -48,8 +48,16 @@
     .restaurants__card {
         width: 45%;
         height: 350px;
+        transition: transform 0.5s ease;
+        &:hover {
+            transform: scale(1.05);
+        }
         & img {
             height: 275px;
+            transition: height 0.5s ease;
+        }
+        &:hover img {
+            height: 350px;
         }
     }
     footer {

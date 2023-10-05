@@ -52,11 +52,12 @@
         color: black;
         &:focus {
             outline: none;
+            max-width: 200px;
         }
     }
     & .fa-location-dot {
         position: absolute;
-        transform: translateX(-100px);
+        transform: translateX(-110px);
         font-size: 20px;
     }
 }

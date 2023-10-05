@@ -59,11 +59,11 @@ img {
             }
             & .container-check {
                 position: absolute;
+                top: 0;
+                right: 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                right: 0px;
-                top: 0px;
                 width: 70px;
                 height: 100%;
                 background: $green;
@@ -99,8 +99,11 @@ img {
                 margin: 0;
             }
             p {
+                display: block;
+                width: auto;
                 margin: 0;
                 font-size: 14px;
+                text-overflow: ellipsis;
             }
         }
     }

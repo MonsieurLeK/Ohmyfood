@@ -142,10 +142,11 @@ header a:hover {
 }
 .location__input:focus {
   outline: none;
+  max-width: 200px;
 }
 .location .fa-location-dot {
   position: absolute;
-  transform: translateX(-100px);
+  transform: translateX(-110px);
   font-size: 20px;
 }
 
@@ -378,11 +379,11 @@ img {
 }
 .menu__section--card .container-check {
   position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 0px;
-  top: 0px;
   width: 70px;
   height: 100%;
   background: #99E2D0;
@@ -418,8 +419,11 @@ img {
   margin: 0;
 }
 .menu__section--card p {
+  display: block;
+  width: auto;
   margin: 0;
   font-size: 14px;
+  text-overflow: ellipsis;
 }
 
 /* Animation des checkbox des cartes de menu */
@@ -634,9 +638,17 @@ img {
   .restaurants__card {
     width: 45%;
     height: 350px;
+    transition: transform 0.5s ease;
+  }
+  .restaurants__card:hover {
+    transform: scale(1.05);
   }
   .restaurants__card img {
     height: 275px;
+    transition: height 0.5s ease;
+  }
+  .restaurants__card:hover img {
+    height: 350px;
   }
   footer {
     flex-direction: row-reverse;
