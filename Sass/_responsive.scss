@@ -1,4 +1,22 @@
 @media (min-width: 1024px) {
+    /** loader **/
+    .loader {
+        &__container {
+            width: 40%;
+            gap: 20px;
+            &--bar {
+                width: 40px;
+                border-radius: 20px 20px 0 0;
+            }
+        }
+    }
+    /** cursor pointer **/
+    .checkbox-heart {
+        cursor: pointer;
+    }
+    .menu__section--card-checkbox {
+        cursor: pointer;
+    }
     /** responsive de l'accueil **/
     .fonctionnement {
         padding: 50px 10%;
@@ -48,4 +66,21 @@
             gap: 20px;
         }
     }
+    /** responsive des menus de restaurants **/
+    img {
+        height: 400px;
+    }
+
+    .menu {
+        align-items: center;
+        width: 70%;
+        margin-left: 15%;
+        &__title {
+            width: 400px;
+        }
+        &__section {
+            width: 70%;
+        }
+    }
+
 }

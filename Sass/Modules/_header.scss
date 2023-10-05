@@ -7,6 +7,7 @@ header {
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.10);
     & .title {
         animation: fade-in-up 1s ease-out forwards;
+        cursor: default;
     }
     & a {
         position: absolute;
@@ -14,7 +15,7 @@ header {
         left: 15px;
         text-decoration: none;
         color: black;
-        transition: font-size 150ms;
+        transition: font-size 200ms;
         transform: translateX(-100px);
         animation: fade-in-left 1s .5s ease-out forwards;
     }

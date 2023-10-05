@@ -16,6 +16,7 @@
         font-family: 'Shrikhand';
         font-size: 3rem;
         animation: title 0.8s ease-in-out alternate infinite;
+        cursor: default;
     }
     &__container {
         display: flex;
@@ -47,7 +48,7 @@
             background: $green;
             margin: 0;
             opacity: 0;
-            transition: all 1s ease-out;
+            transition: all .5s ease-out;
         }
         &--bar:hover {
             margin-right: 20px;
