@@ -41,6 +41,7 @@ input::placeholder {
   border-radius: 50px;
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   transition: filter 0.2s ease;
+  cursor: pointer;
 }
 .button:hover {
   filter: brightness(1.2);
@@ -132,6 +133,7 @@ header a:hover {
 }
 .location__input {
   width: 70%;
+  max-width: 200px;
   height: 100%;
   background: transparent;
   border: none;
@@ -142,11 +144,10 @@ header a:hover {
 }
 .location__input:focus {
   outline: none;
-  max-width: 200px;
 }
 .location .fa-location-dot {
   position: absolute;
-  transform: translateX(-110px);
+  transform: translateX(-120px);
   font-size: 20px;
 }
 
@@ -354,85 +355,77 @@ img {
   height: 3px;
   background: #99E2D0;
 }
-.menu__section--card {
+
+.menu-card {
   position: relative;
   display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  gap: 5px;
+  justify-content: flex-start;
+  align-items: center;
   background: white;
-  box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  margin-top: 15px;
   border-radius: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+  overflow: hidden;
 }
-.menu__section--card-checkbox {
+.menu-card__checkbox {
+  z-index: 3;
   position: absolute;
-  top: 0;
-  left: 0;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   width: 100%;
-  height: 98%;
-  z-index: 1;
-}
-.menu__section--card .container-check {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70px;
   height: 100%;
-  background: #99E2D0;
-  transform: translateX(70px);
-  transition: transform 0.5s ease-out;
+  margin: 0;
 }
-.menu__section--card .container-check__price {
-  position: absolute;
-  left: -40px;
-  bottom: 15px;
-  font-weight: 600;
-  background: white;
-  border-right: 13px solid white;
-  transform: translateX(0px);
+.menu-card__checkbox:checked + .menu-card__text-container {
+  width: calc(100% - 130px);
 }
-.menu__section--card .container-check__circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.menu-card__text-container {
+  padding: 15px;
+  width: calc(100% - 50px);
+  transition: width 0.5s ease;
+}
+.menu-card__text-container h3 {
+  margin: 0;
+  white-space: nowrap;
   overflow: hidden;
-  width: 25px;
-  height: 25px;
-  background: white;
-  border-radius: 50%;
-}
-.menu__section--card .container-check__circle .fa-check {
-  display: block;
-  color: #99E2D0;
-  transform: scaleX(0);
-  transition: transform 0.2s 0.3s ease-out;
-}
-.menu__section--card h3 {
-  margin: 0;
-}
-.menu__section--card p {
-  display: block;
-  width: auto;
-  margin: 0;
-  font-size: 14px;
   text-overflow: ellipsis;
 }
-
-/* Animation des checkbox des cartes de menu */
-.menu__section--card-checkbox:checked + .container-check {
-  transform: translateX(0);
+.menu-card__text-container p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-.menu__section--card-checkbox:checked + .container-check .fa-check {
-  transform: scaleX(1);
+.menu-card__price {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 15px;
+  font-weight: 600;
+  height: 55px;
+  width: 30px;
+}
+.menu-card__price--checkbox-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -1px;
+  right: -85px;
+  height: 72px;
+  width: 70px;
+  background: #99E2D0;
+}
+.menu-card__price--checkbox-container .checkbox-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  color: #99E2D0;
 }
 
 .checkbox-heart {
@@ -678,5 +671,8 @@ img {
   }
   .menu__section {
     width: 70%;
+  }
+  .menu-card__checkbox {
+    cursor: pointer;
   }
 }/*# sourceMappingURL=main.css.map */

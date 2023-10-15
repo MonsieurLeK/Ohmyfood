@@ -45,6 +45,7 @@ input::placeholder {
     border-radius: 50px;
     background: $button-gradient;
     transition: filter 0.2s ease;
+    cursor: pointer;
     &:hover {
         filter: brightness(1.2);
     }
