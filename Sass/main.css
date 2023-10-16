@@ -329,6 +329,7 @@ img {
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
   transform: translateY(-50px);
+  overflow: hidden;
 }
 .menu__title {
   position: relative;
@@ -342,6 +343,7 @@ img {
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
+  animation: menu-section-in 0.5s ease-out backwards;
 }
 .menu__section--title {
   text-transform: uppercase;
@@ -428,6 +430,27 @@ img {
   color: #99E2D0;
 }
 
+/** animation des sections du menu **/
+.first-section {
+  animation-delay: 0.2s;
+}
+
+.second-section {
+  animation-delay: 0.4s;
+}
+
+.third-section {
+  animation-delay: 0.6s;
+}
+
+@keyframes menu-section-in {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 .checkbox-heart {
   position: absolute;
   display: block;
