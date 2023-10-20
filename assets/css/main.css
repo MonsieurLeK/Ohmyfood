@@ -133,7 +133,7 @@ header a:hover {
 }
 .location__input {
   width: 70%;
-  max-width: 200px;
+  max-width: 145px;
   height: 100%;
   background: transparent;
   border: none;
@@ -147,7 +147,7 @@ header a:hover {
 }
 .location .fa-location-dot {
   position: absolute;
-  transform: translateX(-120px);
+  transform: translateX(-80px);
   font-size: 20px;
 }
 
@@ -698,4 +698,4 @@ img {
   .menu-card__checkbox {
     cursor: pointer;
   }
-}/*# sourceMappingURL=main.css.map */
+}
