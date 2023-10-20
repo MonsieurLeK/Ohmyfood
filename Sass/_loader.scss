@@ -14,7 +14,10 @@
     animation: loader-out 1.5s 3.5s ease-out forwards;
     &__title {
         font-family: 'Shrikhand';
+        z-index: 5;
         font-size: 3rem;
+        line-height: 3rem;
+        background-color: transparent;
         animation: title 0.8s ease-in-out alternate infinite;
         cursor: default;
     }
@@ -31,6 +34,7 @@
         &--bar {
             position: relative;
             overflow: hidden;
+            z-index: 6;
             height: 200px;
             width: 30px;
             transform: translateY(150px);
