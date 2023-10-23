@@ -213,7 +213,7 @@ header a:hover {
 }
 .fonctionnement__card i {
   position: absolute;
-  left: calc(50% - 130px);
+  left: calc(50% - 120px);
   color: rgba(0, 0, 0, 0.5);
   font-size: 20px;
 }
