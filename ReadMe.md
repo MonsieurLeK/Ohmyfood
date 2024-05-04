@@ -17,3 +17,5 @@ Compétences développées:
 --------------------
 
 Lien du site live: https://monsieurlek.github.io/Ohmyfood/
+
+Lien vers la maquette: https://www.figma.com/file/CHEBJX8bA9uxCk71L5mD7j/Maquettes-Ohmyfood-(mobile-et-desktop)-(Copy)?type=design&node-id=0-1&mode=design&t=sP2Zhv67TaARk4WJ-0
